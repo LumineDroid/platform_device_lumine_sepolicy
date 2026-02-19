@@ -4,9 +4,12 @@
 #
 
 ifneq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
-BOARD_SEPOLICY_DIRS += \
+BOARD_VENDOR_SEPOLICY_DIRS += \
     device/lumine/sepolicy/atv/vendor
 endif
 
-PRODUCT_PRIVATE_SEPOLICY_DIRS += \
-   device/lumine/sepolicy/atv/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+   device/lumine/sepolicy/atv/system_ext/private
+
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
+   device/lumine/sepolicy/atv/system_ext/public
